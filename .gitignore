@@ -15,6 +15,5 @@ public/game/*.wasm
 epc_info/
 questionnaire_result.csv
 messages_for_bobbie_wang.txt
-DEVELOPER_CHEATSHEET.txt
 *.xlsx
 *.xls

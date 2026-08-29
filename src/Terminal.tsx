@@ -275,7 +275,7 @@ G / AGAIN         repeat a command`}</pre>
                 <h2 id="panel-title">ABOUT THIS GAME</h2>
                 <p>Created for the final morning of EPC Class 5 at CUHK-Shenzhen, August 2026.</p>
                 <p>The original parser is written in C. This page runs that same game logic locally in your browser through WebAssembly. No command or message is sent to a server.</p>
-                <p>Four private messages remain sealed in this public edition. Their contents and recipients are not included in the archive.</p>
+                <p>Public messages follow the choices made in the questionnaire. Private messages remain sealed.</p>
               </>
             )}
           </section>

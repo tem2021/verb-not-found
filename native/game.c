@@ -734,7 +734,7 @@ show_message_bundle(const size_t *indices, size_t count, enum room room)
 		break;
 	case ROOM_CORRIDOR:
 		learn_word(WORD_EXPRESS);
-		puts("\nFour private messages are still sealed. Their recipients remain private;");
+		puts("\nFour private messages are still sealed. Their TO fields are readable;");
 		puts("their contents are not yours to inspect.");
 		break;
 	case ROOM_LIBRARY:
@@ -789,7 +789,7 @@ deliver_private_messages(void)
 
 		if (messages[index].access != MESSAGE_PRIVATE)
 			continue;
-		puts("Delivered one sealed message without displaying its recipient.");
+		printf("Delivered sealed message to %s.\n", messages[index].to);
 		game.delivered[index] = true;
 		any = true;
 	}

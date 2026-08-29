@@ -23,8 +23,9 @@ struct message {
  * obvious form test and is intentionally excluded from the show.
  *
  * Public text is kept as submitted, including its original spelling and
- * punctuation.  Private bodies and recipient identities are deliberately
- * absent.  The source questionnaire must never be added to this public repo.
+ * punctuation.  Private bodies and signatures are deliberately absent; the
+ * recipient labels remain on sealed envelopes for the delivery mechanic.
+ * The source questionnaire must never be added to this public repo.
  */
 static const struct message messages[] = {
 	{
@@ -40,7 +41,7 @@ static const struct message messages[] = {
 		"in the days ahead."
 	},
 	{
-		18, MESSAGE_PRIVATE, "hidden", "a private recipient", NULL
+		18, MESSAGE_PRIVATE, "hidden", "SYQ", NULL
 	},
 	{
 		17, MESSAGE_PUBLIC, "anonymous", "EPC Class 5",
@@ -87,7 +88,7 @@ static const struct message messages[] = {
 		"and listening.Thankyou very much!"
 	},
 	{
-		10, MESSAGE_PRIVATE, "hidden", "a private recipient", NULL
+		10, MESSAGE_PRIVATE, "hidden", "Harrison", NULL
 	},
 	{
 		9, MESSAGE_PUBLIC, "anonymous", "Bobbie Wang",
@@ -107,14 +108,14 @@ static const struct message messages[] = {
 		"明天下午打不打羽毛球"
 	},
 	{
-		5, MESSAGE_PRIVATE, "hidden", "a private recipient", NULL
+		5, MESSAGE_PRIVATE, "hidden", "Iris and Grana", NULL
 	},
 	{
 		4, MESSAGE_PUBLIC, "anonymous", "EPC Class 5",
 		"Enjoy the days spent with you guys. Let’s stay in touch!"
 	},
 	{
-		3, MESSAGE_PRIVATE, "hidden", "a private recipient", NULL
+		3, MESSAGE_PRIVATE, "hidden", "Bobbie", NULL
 	},
 	{
 		2, MESSAGE_PUBLIC, "anonymous", "EPC Class 5",

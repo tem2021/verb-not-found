@@ -14,9 +14,8 @@ PRIVACY
 -------
 
 Only questionnaire messages authorized for public sharing are included. Four
-private messages remain as sealed game objects, but their bodies, signatures,
-recipient names, and original questionnaire metadata are absent from this
-repository. Never copy questionnaire_result.csv or epc_info into this repo.
+private messages remain sealed. The original questionnaire and its metadata are
+not part of this repository. 
 
 
 LOCAL BUILD
@@ -45,13 +44,6 @@ Create the production files:
 
 GITHUB PAGES
 ------------
-
-Push this directory as its own repository named verb-not-found. On GitHub,
-open Settings -> Pages and choose GitHub Actions as the publishing source.
-Every push to main will test the native game, compile WebAssembly, build the
-static site, and deploy it.
-
-For the GitHub account tem2021, the expected project URL is:
 
   https://tem2021.github.io/verb-not-found/
 

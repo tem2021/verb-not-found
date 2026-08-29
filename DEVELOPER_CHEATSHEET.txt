@@ -1,0 +1,557 @@
+VERB NOT FOUND — DEVELOPER CHEAT SHEET
+========================================
+
+WARNING: COMPLETE SPOILERS
+
+This is a developer and live-performance rescue sheet. Commands shown in
+CAPITALS may be typed in any capitalization. The parser compresses repeated
+spaces and usually ignores articles only where the patterns below say so.
+
+
+1. THE SHORTEST RELIABLE WALKTHROUGH
+------------------------------------
+
+ROOM OF NOUNS
+
+  READ MESSAGES
+  TAKE COMMA
+  GO EAST
+
+PRONOUN CORRIDOR
+
+  READ MESSAGES
+  GIVE ENVELOPES TO RECIPIENTS
+  MEET SOMEONE
+  EXPRESS YOURSELF
+  GO NORTH
+
+LIBRARY OF TENSES
+
+  READ MESSAGES
+  TAKE PRESENT
+  GO EAST
+
+CONDITIONAL COURT
+
+  READ MESSAGES
+  USE BOOK AS RACKET
+  PLAY BADMINTON
+  TAKE AND
+  GO SOUTH
+
+ROOM OF NOUNS — RETURN
+
+  GO AND STAY
+
+This reaches the principal ending, WE CONTINUE, with all 18 messages delivered
+and all 7 missing verbs recovered.
+
+
+2. ALL PUZZLE SOLUTIONS
+-----------------------
+
+PUZZLE 1 — LEAVE THE CLASSROOM
+
+Required state:
+
+  * The classroom message bundle has been read.
+  * COMMA is in the inventory.
+
+Commands:
+
+  READ MESSAGES              (READ MESSAGE and READ BUNDLE also work)
+  TAKE COMMA                 (GET COMMA and PICK UP COMMA also work)
+  GO EAST                    (E and EAST also work)
+
+Optional chalk branch:
+
+  THANK TEACHER
+  TAKE CHALK
+
+THANK DESK also reveals the chalk. The chalk is not required because every
+library route supplies a book, but taking it unlocks the alternate racket
+solution and its unique court narration.
+
+Reading this bundle recovers THANK, MEET, and STAY.
+
+
+PUZZLE 2 — COMPLETE THE CORRIDOR
+
+Required state:
+
+  * The corridor bundle has been read.
+  * All 4 sealed private messages have been delivered.
+  * SOMEONE has been met.
+  * The player has expressed themself.
+
+Reliable commands:
+
+  READ MESSAGES
+  GIVE ENVELOPES TO RECIPIENTS
+  MEET SOMEONE
+  EXPRESS YOURSELF
+  GO NORTH
+
+Delivery alternatives:
+
+  GIVE ENVELOPE
+  GIVE MESSAGE
+  DELIVER ENVELOPES
+  DELIVER MESSAGES
+
+Any command beginning with GIVE or DELIVER and containing ENVELOPE or MESSAGE
+delivers all four sealed items. Their bodies are never displayed.
+
+Meeting alternatives:
+
+  MEET SOMEONE
+  MEET STUDENT
+  MEET PERSON
+  SAY HELLO
+  SAY HELLO TO SOMEONE
+  ASK SOMEONE
+  TALK TO SOMEONE
+
+ASK/TALK only initiates the meeting when the line contains SOMEONE, STUDENT,
+or PERSON. SAY HELLO always attempts the meeting. MEET must already have been
+recovered from the classroom bundle.
+
+Expression alternatives:
+
+  EXPRESS
+  EXPRESS YOURSELF
+  EXPRESS SOMEONE
+  EXPRESS TO SOMEONE
+  EXPRESS PERSON
+
+These solve the puzzle only in the corridor and only after meeting SOMEONE.
+Reading the corridor bundle recovers EXPRESS.
+
+
+PUZZLE 3 — CHOOSE A TENSE
+
+First use:
+
+  READ MESSAGES
+
+Then choose exactly one of the three valid branches:
+
+  PAST:       REMEMBER PAST
+              REMEMBER BOOK
+              REMEMBER
+              TAKE PAST
+
+  PRESENT:    TAKE PRESENT
+              TAKE BOOK
+
+  FUTURE:     WISH FUTURE
+              WISH BOOK
+              WISH
+              TAKE FUTURE
+
+Finally:
+
+  GO EAST                    (E and EAST also work)
+
+The first shelf selected permanently removes the other two. TAKE PAST requires
+REMEMBER; TAKE FUTURE requires WISH. Both verbs are recovered by reading the
+library bundle. PRESENT requires neither verb. All three choices are correct
+and each adds a different line to the epilogue.
+
+
+PUZZLE 4 — IMPROVISE A RACKET
+
+First use:
+
+  READ MESSAGES
+
+Then assign either carried object the role of RACKET:
+
+  USE CHALK AS RACKET
+  USE CHALK AS A RACKET
+  USE CHALK LIKE RACKET
+  USE CHALK LIKE A RACKET
+
+or:
+
+  USE BOOK AS RACKET
+  USE BOOK AS A RACKET
+  USE BOOK LIKE RACKET
+  USE BOOK LIKE A RACKET
+
+CHALK works only if it was revealed and taken in the first room. BOOK always
+works after one library shelf has been chosen.
+
+SWING, HOLD, WIELD, MAKE RACKET, HIT, and STRIKE are recognized exploratory
+verbs around this puzzle. They reach the same solution only if the complete
+line still contains CHALK or BOOK plus AS RACKET, AS A RACKET, LIKE RACKET, or
+LIKE A RACKET. WITH alone deliberately does not solve the puzzle; the contrast
+between WITH and AS is part of the clue.
+
+After a racket is ready:
+
+  PLAY
+  PLAY BADMINTON
+  PLAY SHUTTLE
+  PLAY GAME
+  TAKE AND
+  GO SOUTH
+
+PLAY must have been recovered by reading the court bundle. Playing with chalk
+breaks the chalk. Playing with the book marks it damaged and produces a unique
+library complaint in the epilogue. TAKE/GET/PICK UP AND all work.
+
+
+3. ALL ENDINGS
+--------------
+
+Every real ending requires all of the following:
+
+  * The player has returned to the ROOM OF NOUNS.
+  * AND is in the inventory.
+  * All 18 messages have been delivered: 14 read publicly, 4 privately.
+
+ENDING A — WE CONTINUE (principal / contradiction ending)
+
+  GO AND STAY
+  COMBINE GO AND STAY
+  WRITE GO AND STAY
+  WRITE CONTINUE
+  WRITE WE CONTINUE
+
+The parser accepts any WRITE text containing GO AND STAY or CONTINUE.
+
+ENDING B — WE MET
+
+  WRITE WE MET
+  WRITE MET
+
+ENDING C — WE REMEMBER
+
+  WRITE WE REMEMBER
+  WRITE REMEMBER
+
+ENDING D — WE THANK
+
+  WRITE WE THANK
+  WRITE THANK
+
+ENDING E — WE WISH
+
+  WRITE WE WISH
+  WRITE WISH
+
+INTENTIONAL FALSE ENDING
+
+  WRITE WE PLAY
+  WRITE PLAY
+
+This does not finish the game. The sentence asks for another turn. Any other
+WRITE text also fails safely and lets the player try again.
+
+There are 3 shelf outcomes x 2 racket outcomes x 5 true endings = 30 meaningful
+end-state combinations. The chalk route is available only if chalk was taken;
+the book route is always available. Command aliases do not create new states.
+
+
+4. COMPLETE ACTION VOCABULARY
+-----------------------------
+
+The list below documents every intended command word that receives a specific
+parser response. Some words are puzzle actions; others are optional jokes or
+classic interactive-fiction conventions.
+
+BASIC OBSERVATION
+
+  LOOK                  aliases: L, LOOK AROUND
+  EXAMINE <noun>        aliases: X <noun>, LOOK AT <noun>
+  READ <noun>
+  READ MESSAGES         aliases: READ MESSAGE, READ BUNDLE
+  INVENTORY             alias: I
+  MAP
+  SCORE
+
+MOVEMENT
+
+  GO <direction>
+  NORTH                 alias: N
+  SOUTH                 alias: S
+  EAST                  alias: E
+  WEST                  alias: W
+  STAY
+
+MANIPULATION AND PUZZLE ACTIONS
+
+  TAKE <noun>           aliases: GET <noun>, PICK UP <noun>
+  OPEN <noun>
+  GIVE <noun>
+  DELIVER <noun>
+  USE <noun> AS <role>
+  USE <noun> LIKE <role>
+  SWING <noun>
+  HOLD <noun>
+  WIELD <noun>
+  MAKE RACKET ...
+  HIT ... SHUTTLE ...
+  STRIKE ... SHUTTLE ...
+  COMBINE ...
+  WRITE <text>
+
+RECOVERED HUMAN VERBS
+
+  THANK <noun>          recovered in ROOM OF NOUNS
+  MEET <noun>           recovered in ROOM OF NOUNS
+  STAY                  recovered in ROOM OF NOUNS
+  EXPRESS <noun>        recovered in PRONOUN CORRIDOR
+  REMEMBER <noun>       recovered in LIBRARY OF TENSES
+  WISH <noun>           recovered in LIBRARY OF TENSES
+  PLAY <noun>           recovered in CONDITIONAL COURT
+
+CONVERSATION
+
+  ASK <person> [ABOUT <topic>]
+  TALK [TO] <person>
+  SAY HELLO [TO <person>]
+
+GAME AND PARSER CONTROL
+
+  WORDS                 aliases: VERBS, VOCAB
+  HELP                  aliases: INFO, COMMANDS, ?
+  HINT
+  AGAIN                 alias: G
+  WAIT                  alias: Z
+  QUIT                  alias: Q
+
+AGAIN/G repeats the previous normalized command. LOOK, INVENTORY, MAP, WORDS,
+HELP, HINT, and SCORE do not consume a game turn. QUIT exits immediately.
+
+
+5. OPTIONAL / HIDDEN WORDS AND CLASSIC RESPONSES
+------------------------------------------------
+
+These never solve a required puzzle, but each has authored output:
+
+  XYZZY
+  PLUGH
+  EAT COMMA
+  KISS [noun]
+  KILL [noun]
+  ATTACK [noun]
+  SAVE
+  UNDO
+  TIME
+  VERSION
+  BRIEF
+  VERBOSE
+  JUMP
+  SING
+  SING SONG
+  SLEEP
+  WAKE
+  WAKE UP
+  SMELL
+  SMELL <noun>
+  TOUCH <noun>
+  SIT
+  SIT ON <noun>
+  DANCE
+  STUDY
+  STUDY <noun>
+  LAUGH
+  CRY
+  LOVE [noun]
+  LISTEN
+  WHO AM I
+  OBJECT OF THE GAME
+  GOAL OF THE GAME
+
+OPEN PRIVATE and OPEN ENVELOPE receive the privacy response. A bare CHAIR,
+COMMA, MESSAGES, or DOOR receives the special reminder that a noun needs a
+verb. TIME deliberately refuses to reveal the real clock before the epilogue.
+
+
+6. USEFUL NOUN VOCABULARY
+-------------------------
+
+These nouns are explicitly recognized by one or more actions. Their usefulness
+is contextual; not every verb-noun pairing is meaningful.
+
+WORLD OBJECTS
+
+  COMMA
+  BLACKBOARD / BOARD
+  MESSAGE / MESSAGES
+  ENVELOPE / ENVELOPES
+  CHALK
+  PAST
+  PRESENT
+  FUTURE
+  BOOK
+  SHUTTLE / SHUTTLECOCK / BIRDIE
+  NET
+  RACKET
+  AND
+  DOOR
+  CHAIR
+  TAPE / DUBBING
+  CUP
+  PHOTO / PHOTOGRAPH
+  DESK
+
+PEOPLE
+
+  TEACHER
+  SOMEONE
+  STUDENT
+  PERSON
+  CLASSMATE
+  YOURSELF
+  RECIPIENT / RECIPIENTS
+
+ACTIVITY AND ABSTRACT NOUNS
+
+  BADMINTON
+  GAME
+  MESSAGE
+  PAST
+  PRESENT
+  FUTURE
+  HOME
+  CLASS
+  ENDING
+  PERIOD
+
+HOME, CLASS, and FUTURE have special movement-failure responses. ENDING and
+PERIOD are useful when asking COMMA a question. MESSAGE and FUTURE receive
+several special conversational responses.
+
+
+7. OPTIONAL AUTHORED INTERACTIONS
+---------------------------------
+
+THANK accepts custom responses for:
+
+  TEACHER, DESK, DOOR, COMMA, MESSAGE, SOMEONE, STUDENT, CLASSMATE,
+  CHAIR, BOOK, SHUTTLE, NET
+
+MEET accepts custom responses for:
+
+  SOMEONE, STUDENT, PERSON, BLACKBOARD, DOOR, COMMA, TEACHER, YOURSELF
+
+EXPRESS accepts custom responses for:
+
+  YOURSELF, SOMEONE, PERSON, BLACKBOARD, DOOR, COMMA, MESSAGE, CHAIR
+
+REMEMBER accepts custom responses for:
+
+  PAST, BOOK, FUTURE, SOMEONE, MESSAGE, CHAIR
+
+WISH accepts custom responses for:
+
+  FUTURE, BOOK, DOOR, PAST, MESSAGE
+
+PLAY accepts custom responses for:
+
+  BADMINTON, SHUTTLE, GAME, COMMA, MESSAGE, BOOK, FUTURE
+
+ASK/TALK has special handling for:
+
+  COMMA + FUTURE
+  COMMA + ENDING/PERIOD
+  COMMA + MESSAGE
+  COMMA + anything else        (invokes the room's next HINT level)
+  SOMEONE/STUDENT/PERSON
+  TEACHER
+
+USE has special handling for:
+
+  CHALK/BOOK + AS/LIKE RACKET
+  CHALK/BOOK + WITH/HIT/STRIKE/SWING on the court
+  COMMA + DOOR
+  AND
+  COMMA
+  CHAIR
+
+
+8. MAP, LOCKS, AND STATE CHECKLIST
+----------------------------------
+
+                         [LIBRARY OF TENSES]
+                                  |
+                                  +--- [CONDITIONAL COURT]
+                                  |             |
+  [ROOM OF NOUNS] --- [PRONOUN CORRIDOR]       | <SHORTCUT>
+          +-------------------------------------+
+
+ROOM OF NOUNS -> EAST is locked by READ MESSAGES + TAKE COMMA.
+CORRIDOR -> NORTH is locked by private delivery + MEET + EXPRESS.
+LIBRARY -> EAST is locked by choosing PAST, PRESENT, or FUTURE.
+COURT -> SOUTH is locked by PLAY + TAKE AND.
+The final sentence is locked by returning south with all 18 deliveries.
+
+Recovered-word target: 7/7
+Message target:        18/18 (14 public + 4 sealed private)
+
+Message allocation by original questionnaire record number:
+
+  ROOM OF NOUNS:       09, 12, 16, 04
+  PRONOUN CORRIDOR:    18 private, 10 private, 05 private, 03 private,
+                       11 public
+  LIBRARY OF TENSES:   17, 14, 07, 08
+  CONDITIONAL COURT:   06, 13, 15, 19, 02
+
+Questionnaire record 01 is an excluded form test and never appears.
+
+
+9. LIVE-PERFORMANCE RESCUE COMMANDS
+-----------------------------------
+
+If the audience is stuck, use HINT repeatedly. HINT is progressive within each
+room and eventually prints an exact command. WORDS provides the short public
+vocabulary reminder. HELP explains syntax without revealing solutions.
+
+Useful developer invocations:
+
+  make                       build the game
+  ./verb-not-found           normal live mode
+  ./verb-not-found -p        plain output, no ANSI screen control
+  ./verb-not-found -f        skip every Enter pause
+  ./verb-not-found -t        automated chalk/FUTURE/WE CONTINUE route
+  ./verb-not-found -T        automated book/PAST/WE REMEMBER route
+  make test                  run and verify both automated routes
+  ./verb-not-found -h        show command-line flags
+
+Do not use -f for the show: it removes the message and ending pauses that give
+the narration room to breathe. Before performing, verify the laptop's local
+clock and timezone because the epilogue reads the real system time. Use an
+80-column-or-wider UTF-8 terminal with a monospace font.
+
+
+10. FAST DIAGNOSIS
+------------------
+
+Cannot leave the first room:
+  READ MESSAGES, then TAKE COMMA.
+
+Cannot go NORTH from the corridor:
+  READ MESSAGES; GIVE ENVELOPES TO RECIPIENTS; MEET SOMEONE;
+  EXPRESS YOURSELF.
+
+Cannot go EAST from the library:
+  READ MESSAGES, then select exactly one tense.
+
+RACKET NOT FOUND:
+  USE BOOK AS RACKET, or use CHALK if it is in the inventory.
+
+PLAY is rejected as a missing verb:
+  READ MESSAGES on the court first.
+
+Cannot take AND:
+  Prepare the racket, then PLAY BADMINTON.
+
+Final sentence says it is incomplete:
+  Confirm the player is back in ROOM OF NOUNS with AND and SCORE reports
+  Messages 18/18.
+
+Need the most dependable ending command:
+  GO AND STAY
