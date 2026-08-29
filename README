@@ -1,0 +1,71 @@
+VERB NOT FOUND — WEB ARCHIVE
+============================
+
+An English-parser interactive fiction created for the final morning of EPC
+Class 5 at CUHK-Shenzhen in August 2026.
+
+The game engine is written in C. Emscripten compiles the same parser and story
+state into WebAssembly; a small React interface supplies the browser terminal.
+The published site is entirely static. Commands run locally in the visitor's
+browser and are never sent to a server.
+
+
+PRIVACY
+-------
+
+Only questionnaire messages authorized for public sharing are included. Four
+private messages remain as sealed game objects, but their bodies, signatures,
+recipient names, and original questionnaire metadata are absent from this
+repository. Never copy questionnaire_result.csv or epc_info into this repo.
+
+
+LOCAL BUILD
+-----------
+
+Requirements:
+
+  - a C11 compiler
+  - Node.js 22.13 or newer
+  - Emscripten 6.0.8
+
+Build and verify the C game:
+
+  make test
+
+Build the WebAssembly runtime and site:
+
+  npm install
+  make web
+  npm run dev
+
+Create the production files:
+
+  make site
+
+
+GITHUB PAGES
+------------
+
+Push this directory as its own repository named verb-not-found. On GitHub,
+open Settings -> Pages and choose GitHub Actions as the publishing source.
+Every push to main will test the native game, compile WebAssembly, build the
+static site, and deploy it.
+
+For the GitHub account tem2021, the expected project URL is:
+
+  https://tem2021.github.io/verb-not-found/
+
+
+CONTROLS
+--------
+
+Commands are short English phrases. Try L, X COMMA, READ MESSAGES, WORDS,
+HELP, or HINT. The up and down arrow keys recall previous commands.
+
+
+ARCHIVE POLICY
+--------------
+
+Tag the performance snapshot before making later story changes. Generated
+WebAssembly and dist files are intentionally excluded from Git; the pinned
+toolchain and workflow rebuild them from the archived C source.

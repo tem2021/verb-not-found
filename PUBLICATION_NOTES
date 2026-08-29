@@ -1,0 +1,21 @@
+PUBLICATION CHECKLIST
+=====================
+
+[x] Original questionnaire CSV excluded.
+[x] IP addresses, user agents, timestamps, and location data excluded.
+[x] Private message bodies excluded.
+[x] Private recipient names replaced with generic labels.
+[x] Teacher-only message collection excluded.
+[x] Fourteen public messages retained according to their sharing choices.
+[x] Public signatures retained only where public attribution was permitted.
+
+Before every public release:
+
+  1. Run make test.
+  2. Search the full repository for private names and questionnaire metadata.
+  3. Run npm audit.
+  4. Build with the pinned Emscripten version.
+  5. Complete both web walkthrough routes.
+
+The public website performs no analytics, authentication, uploads, cookies, or
+network submission of commands. All play occurs inside the browser.
